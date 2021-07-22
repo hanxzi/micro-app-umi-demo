@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "install": "npm-run-all --serial build install:*",
+    "start": "npm-run-all --parallel start:*",
+    "install:main-app": "cd main-app && yarn",
+    "start:main-app": "cd main-app && yarn start",
+    "install:sub-app-umi": "cd sub-app-umi && yarn",
+    "start:sub-app-umi": "cd sub-app-umi && yarn start",
+    "install:sub-app-vue": "cd sub-app-vue && yarn",
+    "start:sub-app-vue": "cd sub-app-vue && yarn start",
+    "build": "father-build"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "father-build": "^1.19.6"
+  }
+}
